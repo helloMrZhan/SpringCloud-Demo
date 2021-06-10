@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      name: huangshan
+      label: test
+      #uri: http://localhost:8001  #未配置eureka的时候通过config地址访问config
+      profile: test
+      discovery:
+        enabled: true
+        service-id: spring-cloud-config-server #配置了eureka后通过service-id访问config
+    bus:
+      trace:
+        enabled: true
+      enabled: true
+
+# eureka注册中心配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8003/eureka/

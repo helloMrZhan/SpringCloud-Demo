@@ -1,0 +1,18 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: spring-cloud-config-client
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,27 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+#          uri: http://xxx/conconfig.git     # 配置gitlab仓库的地址(注意gitlab地址后缀一定要有.git)
+#          search-paths: config-repo                             # gitlab仓库地址下的相对地址，可以配置多个，用,分割。
+#          username:                                              # gitlab仓库的账号
+#          password:                                              # gitlab仓库的密码
+          uri: https://github.com/MrJackBack/zjqworkhome/     # 配置git仓库的地址
+          search-paths: respo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: yourusername                                            # git仓库的账号
+          password: yourpassword                                             # git仓库的密码
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+# eureka注册中心配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8003/eureka/
