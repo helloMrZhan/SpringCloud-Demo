@@ -1,0 +1,19 @@
+#应用名称
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8001
+eureka:
+  client:
+    # 是否将自己实例注册到Eureka Server中
+    register-with-eureka: false
+    # 是否应从Eureka Server获取Eureka注册表信息
+    fetch-registry: false
+#  server:
+#    # 只读缓存更新时间间隔
+#    response-cache-update-interval-ms: 3000
+#    # 检测无效服务时间间隔
+#    eviction-interval-timer-in-ms: 3000
+#    # 禁用只读缓存
+#    use-read-only-response-cache: false
